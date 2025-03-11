@@ -1,3 +1,4 @@
 node_modules
 .env
 exp.js
+secure_keys/*.json
