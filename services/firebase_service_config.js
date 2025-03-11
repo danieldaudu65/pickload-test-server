@@ -4,9 +4,9 @@ const { getFirestore, FieldValue } = require("firebase-admin/firestore");
 let serviceAccount;
 
 // Check if running in Render (where credentials are stored in an environment variable)
-if (process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON) {
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
     console.log("Using credentials from environment variable.");
-    serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 } else {
     console.log("Using local credentials file.");
     serviceAccount = require("../secure_keys/pickload-3aba1-053f0dc67e2c.json");
